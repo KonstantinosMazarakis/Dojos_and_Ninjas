@@ -1,0 +1,23 @@
+main {
+    width: 70%;
+    min-height: 200px;
+    align-items: center;
+}
+
+.newDojo {
+    border: 1px solid green;
+    width: 30%;
+}
+
+.newDojo, .flex1 {
+flex: 1;
+}
+
+.flex1 {
+    text-align: center;
+    border: 1px solid black;
+}
+
+li {
+    list-style: none;
+}

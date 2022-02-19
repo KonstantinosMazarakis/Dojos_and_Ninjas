@@ -1,0 +1,21 @@
+INSERT INTO  dojos (name) values ("Fight to Fitness");
+INSERT INTO  dojos (name) values ("The Downtown Dojo");
+INSERT INTO  dojos (name) values ("The Dojo on Main Street");
+DELETE from dojos where id < 4;
+INSERT INTO  dojos (name) values ("Fight to Fitness");
+INSERT INTO  dojos (name) values ("The Downtown Dojo");
+INSERT INTO  dojos (name) values ("The Dojo on Main Street");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("kostas","mazarakis","27","4");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("adryana","mazarakis","25","4");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("nami","mazarakis","4","4");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("vagelis","papas","27","5");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("spiros","stanos","25","5");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("eleni","mouzaki","4","5");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("stefanos","eleinos","23","6");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("karis","alvanakos","28","6");
+INSERT INTO  ninjas (first_name, last_name, age, dojos_id) values ("kirito","kirigaya","18","6");
+SELECT * FROM ninjas WHERE dojos_id = (SELECT id FROM dojos ORDER BY id ASC LIMIT 1);
+SELECT * FROM ninjas WHERE dojos_id = (SELECT id FROM dojos ORDER BY id DESC LIMIT 1);
+select * from dojos where id = (select dojos_id from ninjas order by id DESC limit 1);
+
+
