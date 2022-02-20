@@ -10,7 +10,7 @@ class Ninja:
         self.age = data['age']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
-        self.dojos_id = data['dojo_id']
+        self.dojos_id = data['dojos_id']
 
 
 # pull the users table from data base
@@ -23,11 +23,6 @@ class Ninja:
             ninjas.append( cls(ninja) )
         return ninjas
 
-    @classmethod
-    def dojos_ninja(cls,data):
-        query = "SELECT * FROM ninjas WHERE dojos_id = %(id)s"
-        results = connectToMySQL('dojos_and_ninjas_schema').query_db(query,data)
-        return results
 
     @classmethod
     def add_ninja(cls,data):

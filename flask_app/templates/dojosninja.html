@@ -10,7 +10,7 @@
     <title>Dojos and Ninjas</title>
 </head>
 <body>
-    <h1>{{dojo.name}} Ninjas</h1>
+    <h1>{{dojos_with_ninjas.name}} Ninjas</h1>
     <table>
         <thead>
             <tr>
@@ -20,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for ninja in ninjas %}
+            {% for ninja in dojos_with_ninjas.ninjas %}
             <tr>
                 <td>{{ninja.first_name}} </td>
                 <td>{{ninja.last_name}}</td>

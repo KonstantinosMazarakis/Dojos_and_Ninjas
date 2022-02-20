@@ -28,9 +28,8 @@ def new_dojo_post():
 
 @app.route("/dojos/<int:id>")
 def dojos_ninja(id):
-    ninjas = Ninja.dojos_ninja({'id':id})
-    dojo = Dojo.get_one_dojo({'id': id})
-    return render_template("dojosninja.html", ninjas = ninjas, dojo = dojo)
+    dojos_with_ninjas = Dojo.get_dojos_with_ninjas({'id':id})
+    return render_template("dojosninja.html", dojos_with_ninjas = dojos_with_ninjas)
 
 #--------------------------------------------------------
 
